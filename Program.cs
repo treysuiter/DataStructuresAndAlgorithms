@@ -1,26 +1,27 @@
 ﻿using System;
+using BenchmarkDotNet;
 
 namespace DataStructuresAndAlgorithms
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Console.WriteLine("Hello World!");
+            //static void ArrayTest()
+            //{
+            //    int[] array = new int[] { 1, 2, 3 };
+            //    Array.ForEach(array, Console.WriteLine);
+            //}
+            //ArrayTest();
 
-            //Multidimensional array's length will multiple the dimensions
-            int[,] multiArray = new int[2, 3];
-            int multiArrValue = multiArray[0, 2];
+            static void StringTest()
+            {
+                string stringA = "what";
+                string stringB = "what";
 
-            Console.WriteLine(multiArray.Length);
-
-            //Jagged arra's length is just the number of columns
-            int[][] jagArray = new int[2][];
-            jagArray[0] = new int[3];
-
-            Console.WriteLine(jagArray.Length);
-
-
+                Console.WriteLine(Object.ReferenceEquals(stringA, stringB).ToString());  
+            }
+            StringTest();
         }
     }
 }
